@@ -1,0 +1,179 @@
+:root {
+  --padding-size: 10px;
+  --task-padding-size: 20px;
+  --button-size: 1.25em;
+  --main-header-font-size: 1.5rem;
+  --content-header-font-size: 1.25rem;
+  --sidebar-size: 250px;
+  --form-width: 400px;
+  --radio-button-size: 1.25em;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+button, input, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* homepage css */
+.container {
+  height: 100vh;
+}
+
+#title {
+  padding: var(--padding-size);
+}
+
+#content {
+  display: flex;
+  height: 100%;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--content-header-font-size);
+}
+
+#sidebar {
+  width: var(--sidebar-size);
+  max-width: var(--sidebar-size);
+  padding: var(--padding-size);
+}
+
+.remove-list-style {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#task-section {
+  width: 100%;
+  padding: var(--padding-size);
+}
+
+.icon, .button {
+  height: var(--button-size);
+  width: var(--button-size);
+  cursor: pointer;
+}
+
+button.project-button, button.task-form {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+}
+
+.project-button-gap {
+  gap: 1px;
+}
+
+#task-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.center-fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-text {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header {
+  width: 100%;
+}
+
+/* form styling */
+.form {
+  width: var(--form-width);
+  padding: 1.5rem 1rem;
+  background-color: gray;
+}
+
+#task-form fieldset {
+  padding: 0;
+  border: 0;
+}
+
+#task-form h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#task-form textarea, .vertical-resize {
+  resize: vertical;
+}
+
+.block {
+  display: block;
+}
+
+form > div, #task-form > fieldset, .margin-bottom {
+  margin-bottom: 1rem;
+}
+
+form input[type="text"], #task-form textarea, .full-width {
+  width: 100%;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+#subtask-input-container {
+  gap: 1px;
+}
+
+#radio-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.radio, .checkbox {
+  height: var(--radio-button-size);
+  width: var(--radio-button-size);
+}
+
+label {
+  display: inline-block;
+}
+
+label.radio-label::first-letter {
+  text-transform: capitalize;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-header button {
+  width: 5rem;
+}
